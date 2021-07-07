@@ -1,0 +1,30 @@
+<igx-card type="outlined" *ngFor="let item of northwindCategories" class="card">
+  <igx-card-header>
+    <h3 igxCardHeaderTitle>{{ item.name }}</h3>
+    <h5 igxCardHeaderSubtitle></h5>
+  </igx-card-header>
+  <igx-card-content class="content">
+    <igx-combo [data]="northwindRegions" valueKey="regionID" groupKey type="border" [disabled]="false" value displayKey="regionID" [autoFocusSearch]="true" [showSearchCaseIcon]="false" [filterable]="true" class="user-input"></igx-combo>
+    <button igxButton="raised" [disabled]="false" class="user-input">
+      <span>Button</span>
+    </button>
+  </igx-card-content>
+  <igx-card-actions class="actions">
+    <button igxButton="flat" [disabled]="false" class="user-input">
+      <span>Button</span>
+    </button>
+    <button igxButton="icon" type="icon" [disabled]="false" class="icon-button">
+      <igx-icon>favorite</igx-icon>
+    </button>
+    <button igxButton="icon" type="icon" [disabled]="false" class="icon-button">
+      <igx-icon>bookmark</igx-icon>
+    </button>
+    <button igxButton="icon" type="icon" [disabled]="false" class="icon-button">
+      <igx-icon>share</igx-icon>
+    </button>
+  </igx-card-actions>
+</igx-card>
+<igx-tabs selectedIndex="0" [disableAnimation]="true" type="fixed" class="tab-layout">
+  <igx-tabs-group icon="info" label="Label" [disabled]="false" class="tab row"></igx-tabs-group>
+  <igx-tabs-group icon="info" label="Label" [disabled]="false" class="tab row"></igx-tabs-group>
+</igx-tabs>
